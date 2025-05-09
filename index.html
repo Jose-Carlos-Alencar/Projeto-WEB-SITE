@@ -1,99 +1,145 @@
-<!DOCTYPE html>  
-<html lang="pt-BR">  
-<head>  
-    <link href="css/geral.css" rel="stylesheet" />  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Projeto</title>  
-    <style>  
-        body {  
-            font-family: Arial, sans-serif;  
-            margin: 0;  
-            padding: 0;  
-        }  
-        #corpo {  
-            display: flex;  
-            flex-direction: column;  
-            height: 100vh; /* Altura total da página */  
-        }  
-        #topo {  
-            background-color: #ffffff; /* Cor do topo */  
-            height: 100px;  
-            display: flex;  
-            align-items: center;  
-            justify-content: center;  
-            color: white;  
-            font-size: 24px;  
-        }  
-        #menu {  
-            background-color: #c7b8b8; /* Cor do menu */  
-            display: flex;  
-            justify-content: space-around; /* Distribui os botões uniformemente */  
-            align-items: center;  
-            height: 50px; /* Altura mínima do menu */  
-            color: white;  
-        }  
-        #menu div {  
-            cursor: pointer;  
-            padding: 10px; /* Espaçamento dos botões */  
-        }  
-        #conteudo {  
-            display: flex;  
-            flex: 1; /* O conteúdo ocupa o espaço restante */  
-        }  
-        #esquerda, #direita {  
-            flex: 1; /* Cada coluna ocupa a mesma largura */  
-            padding: 10px;  
-            box-sizing: border-box; /* Para incluir padding no tamanho */  
-        }  
-        #centro {  
-            flex: 2; /* Central é mais largo que os lados */  
-            display: flex;  
-            align-items: center;  
-            justify-content: center;  
-            padding: 10px;  
-        }  
-        #esquerda img, #direita img {  
-            max-width: 100%; /* Assegura que as imagens não ultrapassem a largura da div */  
-            height: auto; /* Mantém a proporção das imagens */  
-        }  
-        #rodape {  
-            background-color: #eee; /* Cor do rodapé */  
-            height: 50px;  
-            display: flex;  
-            align-items: center;  
-            justify-content: center;  
-        }  
-    </style>  
-</head>  
-<body>  
-    <div id="corpo">  
-        <div id="topo">Bem Vindo ao meu site </div>  
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Ayrton Senna - Lenda da Fórmula 1</title>
+<style>
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #222;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 3em;
+    color: #FFD700;
+  }
+  nav {
+    margin-top: 10px;
+  }
+  nav a {
+    color: #F0E68C;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  nav a:hover {
+    color: #fff;
+  }
+  section {
+    padding: 20px;
+  }
+  h2 {
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 10px;
+  }
+  .content {
+    max-width: 900px;
+    margin: auto;
+  }
+  .timeline {
+    list-style: none;
+    padding: 0;
+  }
+  .timeline li {
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-left: 3px solid #FFD700;
+  }
+  .images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .images img {
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  }
+  footer {
+    background-color: #000;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 0.9em;
+  }
+  @media(max-width: 768px) {
+    .images {
+      flex-direction: column;
+      align-items: center;
+    }
+    .images img {
+      width: 90%;
+    }
+  }
+</style>
+</head>
+<body>
 
-        <!-- Menu -->  
-        <div id="menu">  
-            <div class="botao1">Home</div>  
-            <div class="botao2"><a href="Empresa.html">Empresa</a></div>  
-            <div class="botao3"> <a href="Servicos.html">Serviços</a></div>  
-            <div class="botao4"> <a href="Contatos.html">Contatos</a></div>  
-            <div class="botao5"> <a href="Fale.html">Fale conosco</a></div>  
-        </div>  
+<header>
+  <h1>Ayrton Senna</h1>
+  <img src="imagem/_SENNA sticker f1_ Sticker for Sale by TatsuSam (1).jpeg">
+  <nav>
+    <a href="#biografia">Biografia</a>
+    <a href="#conquistas">Conquistas</a>
+    <a href="#legado">Legado</a>
+    <a href="#Principais Etapas da Carreira">Principais Etapas da Carreira</a>
+  </nav>
+</header>
 
-        <div id="conteudo">  
-            <div id="esquerda">  
-                <img src="imagen/vnccs.png" alt="Descrição da imagem 1"> <!-- Imagem da esquerda -->  
-            </div>  
-            <div id="centro">  
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/m_-AvwzebXA" frameborder="0" allowfullscreen></iframe> <!-- Vídeo no centro -->  
-            </div>  
-            <div id="direita">  
-                <img src="imagen/viniccius.jpg" alt="Descrição da imagem 2"> <!-- Imagem da direita -->  
-            </div>  
-        </div>  
+<section id="biografia" class="content">
+  <h2>Biografia</h2>
+  <img src="imagem/download (9).jpeg">
+  <p>Ayrton Senna da Silva (21 de março de 1960 – 1º de maio de 1994) foi um piloto de Fórmula 1 brasileiro, considerado um dos maiores de todos os tempos. Sua paixão por velocidade e perfeccionismo o tornaram uma lenda do esporte, além de um ícone cultural no Brasil e no mundo.</p>
+</section>
 
-        <div id="rodape">
-            <iframe width="1000" height="40" img src="imagen/Casa.png" alt="Descrição da imagem 2"> <!-- Imagem da rodape -->
-        </div>  
-    </div>  
-</body>  
-</html>  
+<section id="etapas">  
+  <h2>Principais Etapas da Carreira</h2>  
+  <ul class="timeline">  
+    <li><strong>1984:</strong> Início na Fórmula 1 com a equipe Toleman.</li>  
+    <li><strong>1985:</strong> Assina com a Lotus, conquistando suas primeiras vitórias e se destacando na pista.</li>  
+    <li><strong>1988:</strong> Assina com a McLaren e conquista seu primeiro campeonato mundial.</li>  
+    <li><strong>1990:</strong> Consolida sua carreira com seu segundo título de campeão mundial.</li>  
+    <li><strong>1991:</strong> Ganha seu terceiro campeonato, consolidando seu status de credencial na Fórmula 1.</li>  
+    <li><strong>1994:</strong> Sua última temporada, marcada por sua trágica morte no GP de San Marino.</li>  
+  </ul>  
+</section>   
+
+<section id="conquistas" class="content">
+  <h2>Grandes Conquistas</h2>
+  <ul>
+    <img src="imagem/conquistas.jpg">
+    <li>3 títulos de campeão mundial de Fórmula 1 (1988, 1990, 1991)</li>
+    <li>Antigo recordista de poles na F1</li>
+    <li>Vitórias em 41 Grandes Prêmios</li>
+    <li>Participou de 161 grandes prêmios</li>
+    <li>65 pole positions, na época o recorde absoluto</li>
+    <li>8 vitórias em circuitos de rua</li>
+    <li>9 vitórias em pistas tradicionais (como Spa, Monza, Suzuka)</li>
+    <li>Conquistou a pole em aproximadamente 65% das provas que participou</li>
+    <li>6 vitorias em Monâco cinco consecutivas(1987, 1989, 1990, 1991, 1992 e 1993)</li>
+    <li>Reconhecido por sua habilidade em condições adversas e por seu espírito competitivo</li>
+  </ul>
+</section>
+
+<section id="legado" class="content">
+  <h2>Legado</h2>
+  <img src="imagem/ayrton-senna-1.jpg">
+  <p>Senna não foi apenas um piloto excepcional, mas também um grande humanitário e símbolo de esperança para o Brasil. Sua morte trágica no GP de San Marino, em 1994, chocou o mundo. Seu legado vive através de campanhas sociais, de sua história e de todos que ainda o admiram.</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Homenagem a Ayrton Senna. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
